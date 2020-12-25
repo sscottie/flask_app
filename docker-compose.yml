@@ -1,0 +1,14 @@
+version: "2"
+
+services:
+  grafana:
+    image: grafana/grafana:5.1.0
+    ports:
+      - 3000:3000
+    user: "104"
+
+  app:
+    build:
+      dockerfile: ./Dockerfile
+    ports:
+      - 5000:5000

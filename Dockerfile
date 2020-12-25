@@ -10,7 +10,6 @@ COPY ./requirements.txt /var/www/requirements.txt
 
 RUN pip install -r /var/www/requirements.txt
 
-RUN nc localhost < /dev/null; echo $?
 RUN bash script.sh
 
 EXPOSE 5000
