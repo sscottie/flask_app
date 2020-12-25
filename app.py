@@ -27,6 +27,7 @@ def predict_api():
     '''
     For direct API calls trought request
     '''
+    print("it works")
     data = request.get_json(force=True)
     prediction = model.predict([np.array(list(data.values()))])
 
